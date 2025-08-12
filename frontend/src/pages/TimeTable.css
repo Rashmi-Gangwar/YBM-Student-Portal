@@ -1,0 +1,100 @@
+.timetable-container {
+  padding: 20px;
+  max-width: 1400px;
+  margin: auto;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fefefe;
+}
+
+.heading {
+  text-align: center;
+  font-size: 32px;
+  color: #2c3e50;
+  margin-bottom: 30px;
+}
+
+.day-section {
+  margin-bottom: 40px;
+}
+
+.day-title {
+  font-size: 24px;
+  color: #34495e;
+  margin-bottom: 15px;
+  padding-left: 5px;
+  border-left: 4px solid #3498db;
+}
+
+.lectures-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  overflow-x: auto;
+  padding: 12px 0px 12px 10px;
+}
+
+.lecture-card {
+  background-color: #ffffff;
+  border-left: 5px solid #3498db;
+  padding: 15px 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  position: relative;
+  transition: transform 0.2s ease;
+  min-width: 220px;
+}
+
+.lecture-card:hover {
+  transform: translateY(-3px);
+}
+
+.period-number {
+  position: absolute;
+  top: -12px;
+  left: -12px;
+  background-color: #3498db;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 4px 10px;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.lecture-card h4 {
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #2c3e50;
+}
+
+.lecture-card p {
+  margin: 4px 0;
+  font-size: 14px;
+  color: #555;
+}
+
+/* Scrollbar for mobile scroll hint */
+.lectures-wrapper::-webkit-scrollbar {
+  height: 6px;
+}
+.lectures-wrapper::-webkit-scrollbar-thumb {
+  background-color: #bbb;
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .lectures-wrapper {
+    display: flex;
+    overflow-x: auto;
+    padding-bottom: 12px;
+  }
+
+  .lecture-card {
+    flex: 0 0 80%;
+    margin-right: 12px;
+  }
+
+  .day-title {
+    font-size: 20px;
+  }
+}

@@ -1,0 +1,90 @@
+.registration-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  min-height: 100vh;
+  background-color: #f4f7fc;
+  flex-wrap: wrap;
+}
+
+.left-card {
+  background-color: #fff;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  padding: 20px 30px;
+  margin: 10px;
+  width: 300px;
+  text-align: center;
+}
+
+.left-card h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.left-card button {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background-color: #007bff;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.left-card button:hover {
+  background-color: #0056b3;
+}
+
+.right-form {
+  flex: 1;
+  min-width: 250px;
+  max-width: 400px;
+  margin: 20px;
+}
+
+.form-card {
+  background: #fff;
+  padding: 40px 30px;
+  border-radius: 20px;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.3);
+}
+
+.form-card h2 {
+  margin-bottom: 20px;
+  text-align: center;
+  color: #333;
+}
+
+.form-card form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-card input {
+  margin-bottom: 15px;
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.form-card button {
+  padding: 12px;
+  background-color: #28a745;
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.form-card button:hover {
+  background-color: #218838;
+}

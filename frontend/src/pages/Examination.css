@@ -1,0 +1,65 @@
+.exam-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.exam-title {
+  text-align: center;
+  font-size: 2rem;
+  color: #2c3e50;
+  margin-bottom: 30px;
+}
+
+.exam-section {
+  margin-bottom: 30px;
+}
+
+.exam-section h3 {
+  color: #34495e;
+  margin-bottom: 10px;
+}
+
+.internal-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.mark-card {
+  flex: 1 1 250px;
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: #f8f9fa;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.mark-card h4 {
+  margin-bottom: 10px;
+  color: #2c3e50;
+}
+
+.download-btn {
+  padding: 10px 20px;
+  background-color: rgb(6, 190, 6);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.download-btn:hover {
+  background-color: rgb(34, 135, 0);
+}
+
+@media screen and (max-width: 768px) {
+  .internal-cards {
+    flex-direction: column;
+  }
+
+  .mark-card {
+    width: 100%;
+  }
+}
