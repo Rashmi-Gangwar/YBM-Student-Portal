@@ -1,1 +1,1 @@
-# YBM-School-Portal
+# YBM-Student-Portal
