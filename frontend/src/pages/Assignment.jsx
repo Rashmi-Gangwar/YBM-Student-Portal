@@ -41,7 +41,7 @@ const Assignment = () => {
                 <td>20</td>
                 <td>-</td>
               </tr>
-              {/* Add more rows dynamically */}
+
             </tbody>
           </table>
         </div>
@@ -74,7 +74,7 @@ const Assignment = () => {
                 <td>Accepted</td>
                 <td>2</td>
               </tr>
-              {/* Add more rows dynamically */}
+              
             </tbody>
           </table>
         </div>

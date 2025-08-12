@@ -216,7 +216,7 @@
   font-size: 14px;
 }
 
-/* Tablets and small laptops */
+
 @media (max-width: 1024px) {
   .dashboard-container {
     flex-direction: column;
@@ -237,7 +237,7 @@
   }
 }
 
-/* Mobile devices */
+
 @media (max-width: 768px) {
   .dashboard-container {
     padding: 20px;
@@ -266,7 +266,7 @@
   }
 }
 
-/* Extra small devices */
+
 @media (max-width: 500px) {
   .student-info {
     flex-direction: column;
