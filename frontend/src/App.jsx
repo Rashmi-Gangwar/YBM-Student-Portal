@@ -12,6 +12,7 @@ import Assignment from "./pages/Assignment";
 import Profile from "./pages/Profile";
 import Library from "./pages/Library";
 import Examination from "./pages/Examination";
+import Fees from "./pages/Fees";
 
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -54,6 +55,7 @@ const App = () => {
           <Route path="/profile" element={<Profile />} />
           <Route path="/library" element={<Library />} />
           <Route path="/examination" element={<Examination />} />
+          <Route path="/fee" element={<Fees />} />
         </Routes>
       </main>
       <ToastContainer theme="colored" />

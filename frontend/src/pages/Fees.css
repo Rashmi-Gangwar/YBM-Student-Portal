@@ -1,0 +1,233 @@
+.fees-page {
+  max-width: 1100px;
+  margin: auto;
+  padding: 30px 20px;
+  font-family: "Segoe UI", sans-serif;
+  color: #2c3e50;
+  background: #f8fafc;
+}
+
+h2 {
+  margin-bottom: 15px;
+  font-size: 22px;
+  font-weight: 600;
+  color: #1a252f;
+  border-left: 5px solid #3498db;
+  padding-left: 12px;
+}
+
+/* Billing Summary */
+.billing-summary {
+  margin-bottom: 40px;
+}
+
+.summary-cards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  flex: 1;
+  min-width: 220px;
+  background: linear-gradient(135deg, #ffffff, #f1f5f9);
+  border-radius: 14px;
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.12);
+}
+.card h3 {
+  font-size: 16px;
+  margin-bottom: 8px;
+  color: #555;
+}
+.card p {
+  font-size: 22px;
+  font-weight: bold;
+  color: #2c3e50;
+}
+.card.paid p {
+  color: #27ae60;
+}
+.card.due p {
+  color: #e74c3c;
+}
+
+/* Fee Receipt */
+.fee-receipt {
+  margin-bottom: 40px;
+}
+
+.receipt-box {
+  background: #ffffff;
+  border: 1px solid #e1e5eb;
+  padding: 25px;
+  border-radius: 14px;
+  box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.3s ease;
+}
+.receipt-box:hover {
+  box-shadow: 0px 10px 22px rgba(0, 0, 0, 0.12);
+}
+.receipt-box p {
+  margin: 10px 0;
+  font-size: 15px;
+  color: #444;
+}
+.download-btn {
+  margin-top: 18px;
+  background: linear-gradient(135deg, #2980b9, #2c3e50);
+  color: #fff;
+  padding: 12px 22px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 15px;
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+.download-btn:hover {
+  background: linear-gradient(135deg, #3498db, #1a252f);
+  transform: translateY(-2px);
+}
+
+/* Transaction History */
+.transaction-history {
+  overflow-x: auto;
+  margin-top: 20px;
+}
+
+.transaction-history table {
+  width: 100%;
+  min-width: 600px;
+  border-collapse: collapse;
+  background: #ffffff;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+.transaction-history th,
+.transaction-history td {
+  padding: 16px 18px;
+  text-align: left;
+  border-bottom: 1px solid #f0f2f5;
+  white-space: nowrap;
+}
+
+.transaction-history th {
+  background: #f1f5f9;
+  font-weight: 600;
+  color: #2c3e50;
+  font-size: 15px;
+}
+
+.transaction-history tr:hover {
+  background: #f9fbfd;
+  transition: background 0.3s ease;
+}
+
+.transaction-history td {
+  font-size: 14px;
+  color: #444;
+}
+
+.transaction-history td.paid {
+  color: #27ae60;
+  font-weight: 600;
+}
+
+.transaction-history td.pending {
+  color: #e67e22;
+  font-weight: 600;
+}
+
+/* Scrollbar Styling  */
+.transaction-history::-webkit-scrollbar {
+  height: 8px;
+}
+
+.transaction-history::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.transaction-history::-webkit-scrollbar-thumb {
+  background: #bbb;
+  border-radius: 10px;
+  transition: background 0.3s;
+}
+
+.transaction-history::-webkit-scrollbar-thumb:hover {
+  background: #888;
+}
+
+/* Payment Methods */
+.payment-methods .methods {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.method-card {
+  flex: 1;
+  min-width: 240px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0px 6px 14px rgba(0,0,0,0.06);
+  transition: transform 0.2s ease;
+}
+.method-card:hover {
+  transform: translateY(-4px);
+}
+.method-card button {
+  margin-top: 12px;
+  padding: 8px 16px;
+  background: #2980b9;
+  border: none;
+  color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.method-card button:hover {
+  background: #1a5276;
+}
+
+/* Download Center */
+.download-center {
+  margin: 30px 0;
+  text-align: center;
+}
+.download-center p {
+  margin-bottom: 12px;
+}
+
+/* Support Section */
+.support-section {
+  margin: 30px 0;
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.05);
+}
+.support-section p {
+  margin: 6px 0;
+  font-size: 15px;
+}
+
+@media (max-width: 768px) {
+  .summary-cards {
+    flex-direction: column;
+  }
+
+  .transaction-history table {
+    min-width: 600px;
+  }
+}

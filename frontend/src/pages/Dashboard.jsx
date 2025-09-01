@@ -39,6 +39,9 @@ const Dashboard = () => {
           <div>
             <button onClick={() => navigate("/examination")}>Examination</button>
           </div>
+          <div>
+            <button onClick={() => navigate("/fee")}>Fees</button>
+          </div>
         </div>
 
         <div className="widgets">
