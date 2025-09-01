@@ -2,7 +2,6 @@ body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
   background-color: #fff;
-  margin: 40px;
 }
 
 .login-wrapper {
@@ -10,7 +9,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 5rem;
+  padding-block: 4rem;
 }
 
 .login-container {

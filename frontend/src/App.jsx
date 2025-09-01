@@ -17,6 +17,7 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
 import { Context } from "./main";
+import Login from "./pages/Login";
 
 const App = () => {
   const { setIsAuthenticated, setUser } = useContext(Context);
@@ -46,6 +47,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Dashboard />} />
           <Route path="/attendance" element={<Attendance />} />
+          <Route path="/login" element={<Login />} />
           <Route path="/time-table" element={<TimeTable />} />
           <Route path="/registration" element={<Registration />} />
           <Route path="/assignments" element={<Assignment />} />

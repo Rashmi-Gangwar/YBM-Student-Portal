@@ -1,12 +1,21 @@
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { FaSignOutAlt } from "react-icons/fa";
+import React, { useContext, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { FaSignInAlt, FaSignOutAlt } from "react-icons/fa";
 import "./Header.css";
 import logo from "../assets/react.svg";
+import { Context } from "../main";
 
 const Header = () => {
   const navigate = useNavigate();
   const [menuOpen, setMenuOpen] = useState(false);
+  const { isAuthenticated, user, setIsAuthenticated, setUser } = useContext(Context);
+
+  const handleLogout = () => {
+    // Add any other logout logic here (e.g., clearing tokens)
+    setIsAuthenticated(false);
+    setUser(null);
+    console.log("User has been logged out.");
+  };
 
   return (
     <header className="main-header">
@@ -21,7 +30,21 @@ const Header = () => {
 
         <div className="top-right">
           <div className="logout-btn">
-            <button className="btn logout"><FaSignOutAlt /> Logout</button>
+
+            {isAuthenticated && user ? (
+              // If the user IS authenticated
+              <>
+                <span className="welcome-message">Welcome, {user.name}!</span>
+                <button className="btn logout" onClick={handleLogout}>
+                  <FaSignOutAlt /> Logout
+                </button>
+              </>
+            ) : (
+              // If the user IS NOT authenticated
+              <Link to="/login" className="btn login">
+                <FaSignInAlt /> Login
+              </Link>
+            )}
           </div>
         </div>
 
