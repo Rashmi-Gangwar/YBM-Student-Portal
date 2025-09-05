@@ -1,18 +1,28 @@
+/* ===== Fees Page Dark Theme ===== */
+
 .fees-page {
   max-width: 1100px;
   margin: auto;
-  padding: 30px 20px;
+  padding: 100px 20px 60px 20px;
   font-family: "Segoe UI", sans-serif;
-  color: #2c3e50;
-  background: #f8fafc;
+  color: #ccc;
+  background: #111;
 }
 
+h1 {
+  text-align: center;
+  font-size: 2rem;
+  color: #fff;
+  margin-bottom: 30px;
+  padding-bottom: 10px;
+}
+
+/* Section Headings */
 h2 {
   margin-bottom: 15px;
   font-size: 22px;
   font-weight: 600;
-  color: #1a252f;
-  border-left: 5px solid #3498db;
+  color: #fff;
   padding-left: 12px;
 }
 
@@ -30,32 +40,32 @@ h2 {
 .card {
   flex: 1;
   min-width: 220px;
-  background: linear-gradient(135deg, #ffffff, #f1f5f9);
+  background: linear-gradient(135deg, #222, #1a1a1a);
   border-radius: 14px;
   padding: 25px;
   text-align: center;
-  box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.08);
+  box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.4);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .card:hover {
   transform: translateY(-6px);
-  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.6);
 }
 .card h3 {
   font-size: 16px;
   margin-bottom: 8px;
-  color: #555;
+  color: #ccc;
 }
 .card p {
   font-size: 22px;
   font-weight: bold;
-  color: #2c3e50;
+  color: #fff;
 }
 .card.paid p {
-  color: #27ae60;
+  color: #27ae60; /* Green */
 }
 .card.due p {
-  color: #e74c3c;
+  color: #e60000; /* Red */
 }
 
 /* Fee Receipt */
@@ -64,24 +74,24 @@ h2 {
 }
 
 .receipt-box {
-  background: #ffffff;
-  border: 1px solid #e1e5eb;
+  background: #1a1a1a;
+  border: 1px solid #333;
   padding: 25px;
   border-radius: 14px;
-  box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.08);
+  box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.4);
   transition: box-shadow 0.3s ease;
 }
 .receipt-box:hover {
-  box-shadow: 0px 10px 22px rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 10px 22px rgba(0, 0, 0, 0.6);
 }
 .receipt-box p {
   margin: 10px 0;
   font-size: 15px;
-  color: #444;
+  color: #ccc;
 }
 .download-btn {
   margin-top: 18px;
-  background: linear-gradient(135deg, #2980b9, #2c3e50);
+  background: linear-gradient(135deg, #e77a00, #333);
   color: #fff;
   padding: 12px 22px;
   border: none;
@@ -92,7 +102,7 @@ h2 {
   transition: transform 0.2s ease, background 0.3s ease;
 }
 .download-btn:hover {
-  background: linear-gradient(135deg, #3498db, #1a252f);
+  background: linear-gradient(135deg, #ff8c1a, #1a1a1a);
   transform: translateY(-2px);
 }
 
@@ -106,35 +116,35 @@ h2 {
   width: 100%;
   min-width: 600px;
   border-collapse: collapse;
-  background: #ffffff;
+  background: #1a1a1a;
   border-radius: 14px;
   overflow: hidden;
-  box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.08);
+  box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.4);
 }
 
 .transaction-history th,
 .transaction-history td {
   padding: 16px 18px;
   text-align: left;
-  border-bottom: 1px solid #f0f2f5;
+  border-bottom: 1px solid #333;
   white-space: nowrap;
 }
 
 .transaction-history th {
-  background: #f1f5f9;
+  background: #222;
   font-weight: 600;
-  color: #2c3e50;
+  color: #fff;
   font-size: 15px;
 }
 
 .transaction-history tr:hover {
-  background: #f9fbfd;
+  background: #2a2a2a;
   transition: background 0.3s ease;
 }
 
 .transaction-history td {
   font-size: 14px;
-  color: #444;
+  color: #ccc;
 }
 
 .transaction-history td.paid {
@@ -143,31 +153,32 @@ h2 {
 }
 
 .transaction-history td.pending {
-  color: #e67e22;
+  color: #e77a00;
   font-weight: 600;
 }
 
-/* Scrollbar Styling  */
+/* Scrollbar Styling */
 .transaction-history::-webkit-scrollbar {
   height: 8px;
 }
-
 .transaction-history::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  background: #222;
   border-radius: 10px;
 }
-
 .transaction-history::-webkit-scrollbar-thumb {
-  background: #bbb;
+  background: #555;
   border-radius: 10px;
   transition: background 0.3s;
 }
-
 .transaction-history::-webkit-scrollbar-thumb:hover {
-  background: #888;
+  background: #777;
 }
 
 /* Payment Methods */
+.payment-methods h2 {
+  padding: 20px;
+}
+
 .payment-methods .methods {
   display: flex;
   gap: 20px;
@@ -176,11 +187,11 @@ h2 {
 .method-card {
   flex: 1;
   min-width: 240px;
-  background: #fff;
+  background: #222;
   border-radius: 12px;
   padding: 20px;
   text-align: center;
-  box-shadow: 0px 6px 14px rgba(0,0,0,0.06);
+  box-shadow: 0px 6px 14px rgba(0,0,0,0.4);
   transition: transform 0.2s ease;
 }
 .method-card:hover {
@@ -189,14 +200,15 @@ h2 {
 .method-card button {
   margin-top: 12px;
   padding: 8px 16px;
-  background: #2980b9;
+  background: #e77a00;
   border: none;
   color: #fff;
   border-radius: 6px;
   cursor: pointer;
+  transition: background 0.3s;
 }
 .method-card button:hover {
-  background: #1a5276;
+  background: #cc6600;
 }
 
 /* Download Center */
@@ -206,20 +218,22 @@ h2 {
 }
 .download-center p {
   margin-bottom: 12px;
+  color: #ccc;
 }
 
 /* Support Section */
 .support-section {
   margin: 30px 0;
-  background: #f9f9f9;
+  background: #222;
   padding: 20px;
   border-radius: 12px;
   text-align: center;
-  box-shadow: 0px 4px 12px rgba(0,0,0,0.05);
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.4);
 }
 .support-section p {
   margin: 6px 0;
   font-size: 15px;
+  color: #ccc;
 }
 
 @media (max-width: 768px) {

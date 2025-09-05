@@ -7,35 +7,26 @@
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
+  background: #111;
+  color: #ccc;
 }
 
 .attendance-container {
-  padding: 30px;
-  background-color: #f9f9f9;
+  padding: 90px;
+  background-color: #1a1a1a;
   animation: fadeInUp 0.6s ease;
+  border-radius: 10px;
 }
 
-
+/* Animations */
 @keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes scaleIn {
-  from {
-    opacity: 0;
-    transform: scale(0.95);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
 }
 
 /* Stats Section */
@@ -43,6 +34,7 @@ body {
   text-align: center;
   margin-bottom: 1.5rem;
   font-size: 1.8rem;
+  color: #fff;
 }
 
 .stat-cards {
@@ -53,12 +45,12 @@ body {
 }
 
 .stat-card {
-  background-color: white;
+  background-color: #222;
   padding: 1rem 2rem;
   border-radius: 12px;
-  color: black;
+  color: #fff;
   text-align: center;
-  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.4);
   min-width: 140px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   animation: scaleIn 0.4s ease-in-out;
@@ -66,13 +58,13 @@ body {
 
 .stat-card:hover {
   transform: scale(1.05);
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.6);
 }
 
-.stat-card.present { border-top: 4px solid #00c853; }
-.stat-card.absent { border-top: 4px solid #d50000; }
-.stat-card.not-marked { border-top: 4px solid #9e9e9e; }
-.stat-card.percentage { border-top: 4px solid #2979ff; }
+.stat-card.present { border-top: 4px solid green; }
+.stat-card.absent { border-top: 4px solid #e60000; }
+.stat-card.not-marked { border-top: 4px solid #555; }
+.stat-card.percentage { border-top: 4px solid #e77a00; }
 
 /* Subject Summary */
 .subject-summary {
@@ -81,7 +73,7 @@ body {
 
 .subject-summary h2 {
   text-align: center;
-  color: #000;
+  color: #fff;
   margin-bottom: 1rem;
   font-size: 1.8rem;
 }
@@ -93,27 +85,33 @@ body {
 .subject-summary-table {
   width: 100%;
   border-collapse: collapse;
-  background: white;
+  background: #222;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
 }
 
 .subject-summary-table th,
 .subject-summary-table td {
   padding: 1rem;
   text-align: center;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #333;
+  color: #ccc;
+}
+
+.subject-summary-table th {
+  background: #333;
+  color: #fff;
 }
 
 .subject-summary-table tbody tr:hover {
-  background: #f1f1f1;
+  background: #1a1a1a;
   transition: background 0.3s;
 }
 
 .subject-summary-table td:nth-child(5) {
   font-weight: bold;
-  color: #4caf50;
+  color: green;
 }
 
 /* Today's Attendance */
@@ -125,33 +123,35 @@ body {
 .todays-attendance-section h2 {
   text-align: center;
   margin-bottom: 1rem;
-  color: #000;
+  color: #fff;
   font-size: 1.8rem;
 }
 
 .todays-attendance-table {
   width: 100%;
   border-collapse: collapse;
-  background: white;
+  background: #222;
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
 }
 
 .todays-attendance-table th,
 .todays-attendance-table td {
   padding: 1rem;
   text-align: center;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #333;
+  color: #ccc;
 }
 
 .todays-attendance-table th {
-  background: #f7f9fc;
+  background: #333;
   font-weight: 600;
+  color: #fff;
 }
 
 .todays-attendance-table tbody tr:hover {
-  background-color: #f1f1f1;
+  background-color: #1a1a1a;
   transition: background 0.3s;
 }
 
@@ -165,26 +165,18 @@ body {
 }
 
 .status.present {
-  background-color: #d1fae5;
-  color: #065f46;
+  background-color: rgba(0, 128, 0, 0.2);
+  color: green;
 }
 
 .status.absent {
-  background-color: #fee2e2;
-  color: #991b1b;
+  background-color: rgba(230, 0, 0, 0.2);
+  color: #e60000;
 }
 
 .status.na {
-  background-color: #e5e7eb;
-  color: #374151;
-}
-
-@media (max-width: 768px) {
-  .todays-attendance-table th,
-  .todays-attendance-table td {
-    font-size: 13px;
-    padding: 0.8rem;
-  }
+  background-color: #333;
+  color: #ccc;
 }
 
 /* Monthly Attendance */
@@ -192,6 +184,7 @@ body {
   font-size: 1.6rem;
   text-align: center;
   margin: 2rem 0 1rem;
+  color: #fff;
 }
 
 .month-select {
@@ -200,6 +193,7 @@ body {
   margin-bottom: 1rem;
   gap: 10px;
   flex-wrap: wrap;
+  color: #ccc;
 }
 
 .month-select label {
@@ -209,14 +203,16 @@ body {
 .month-select select {
   padding: 6px 12px;
   border-radius: 6px;
-  border: 1px solid #ccc;
+  border: 1px solid #333;
   font-size: 14px;
+  background: #222;
+  color: #ccc;
   outline: none;
   transition: border 0.3s;
 }
 
 .month-select select:focus {
-  border-color: #2979ff;
+  border-color: #e77a00;
 }
 
 .monthly-table {
@@ -227,25 +223,35 @@ body {
   width: 100%;
   min-width: 800px;
   border-collapse: collapse;
-  background: white;
+  background: #222;
   border-radius: 8px;
   overflow: hidden;
+  color: #ccc;
 }
 
 .monthly-table th,
 .monthly-table td {
   padding: 8px;
   text-align: center;
-  border: 1px solid #ddd;
+  border: 1px solid #333;
   font-size: 13px;
 }
 
-.cell.p { background-color: #ecfdf5; color: #065f46; }
-.cell.a { background-color: #fef2f2; color: #b91c1c; }
-.cell.na { background-color: #f3f4f6; color: #4b5563; }
+.monthly-table th {
+  background: #333;
+  color: #fff;
+}
+
+.cell.p { background-color: rgba(0, 128, 0, 0.2); color: green; }
+.cell.a { background-color: rgba(230, 0, 0, 0.2); color: #e60000; }
+.cell.na { background-color: #1a1a1a; color: #ccc; }
 
 /* Responsive */
 @media (max-width: 768px) {
+  .attendance-container {
+    padding: 40px 20px;
+  }
+
   .stat-cards {
     flex-direction: column;
     align-items: center;

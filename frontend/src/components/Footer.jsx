@@ -41,6 +41,7 @@ const Footer = () => {
               <li onClick={() => navigate("/")}>Dashboard</li>
               <li onClick={() => navigate("/assignments")}>Assignmnets</li>
               <li onClick={() => navigate("/examination")}>Examination</li>
+              <li onClick={() => navigate("/syllabus")}>Syllabus</li>
               <li onClick={() => navigate("/attendance")}>Attendance</li>
               <li onClick={() => navigate("/time-table")}>Time Table</li>
             </ul>

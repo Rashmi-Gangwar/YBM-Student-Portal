@@ -1,6 +1,7 @@
 import React from "react";
 import "./Profile.css";
 import aiEmoji from "../assets/ai-emoji.jpg";
+import { useNavigate } from "react-router-dom";
 import {
   FaUserGraduate,
   FaPhoneAlt,
@@ -18,6 +19,8 @@ import {
 } from "react-icons/fa";
 
 const Profile = () => {
+  const navigate = useNavigate();
+  
   return (
     <div className="profile-container">
       {/* Left Side */}
@@ -62,7 +65,7 @@ const Profile = () => {
       {/* Right Side */}
       <div className="profile-right">
         <div className="top-actions">
-          <button className="btn"><FaSchool /> Syllabus</button>
+          <button className="btn" onClick={() => navigate("/syllabus")}><FaSchool /> Syllabus</button>
           <button className="btn"><FaChartLine /> Apply GP Marks</button>
           <button className="btn"><FaAward /> Achievements</button>
         </div>

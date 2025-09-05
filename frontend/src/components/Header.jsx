@@ -41,9 +41,7 @@ const Header = () => {
               </>
             ) : (
               // If the user IS NOT authenticated
-              <Link to="/login" className="btn login">
-                <FaSignInAlt /> Login
-              </Link>
+              <button className="btn logout"> <FaSignOutAlt/> Logout</button>
             )}
           </div>
         </div>

@@ -34,7 +34,7 @@ const Dashboard = () => {
             <button onClick={() => navigate("/attendance")}>Attendance</button>
           </div>
           <div>
-            <button onClick={() => navigate("/assignments")}>Assignments</button>
+            <button onClick={() => navigate("/syllabus")}>Syllabus</button>
           </div>
           <div>
             <button onClick={() => navigate("/examination")}>Examination</button>
@@ -82,10 +82,10 @@ const Dashboard = () => {
           <h4>Your Assignments</h4>
           <div className="assignment-cards">
             <div className="card yellow-card">
-              <h5>Tally & Spreadsheet Modelling</h5>
+              <h5 onClick={() => navigate("/assignments")}>Tally & Spreadsheet Modelling</h5>
             </div>
             <div className="card red-card">
-              <h5>Personality Development</h5>
+              <h5 onClick={() => navigate("/assignments")}>Personality Development</h5>
             </div>
           </div>
         </div>

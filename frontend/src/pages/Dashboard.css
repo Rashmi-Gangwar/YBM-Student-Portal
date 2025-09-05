@@ -2,12 +2,17 @@
   display: flex;
   gap: 20px;
   align-items: flex-start;
-  padding: 60px;
+  padding: 100px;
+  background: #111;
+  color: #ccc;
+  font-family: 'Segoe UI', sans-serif;
 }
 
 .main {
   flex: 1;
   padding: 20px;
+  background: #1a1a1a;
+  border-radius: 10px;
 }
 
 .top-bar {
@@ -22,13 +27,21 @@
   padding: 10px;
   width: 300px;
   border-radius: 5px;
-  border: 1px solid #ccc;
+  border: 1px solid #333;
+  background: #222;
+  color: #ccc;
+}
+
+.top-bar input:focus {
+  outline: none;
+  border-color: #e77a00;
 }
 
 .profile-info {
   display: flex;
   align-items: center;
   gap: 10px;
+  color: #fff;
 }
 
 .stats {
@@ -39,20 +52,21 @@
 }
 
 .stats button {
-  background-color: lavender;
-  color: black;
-  border: none;
+  background-color: #222;
+  color: #fff;
+  border: 1px solid #333;
   padding: 12px 20px;
   border-radius: 8px;
   font-size: 16px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, border 0.3s ease;
   flex: 1;
   min-width: 150px;
 }
 
 .stats button:hover {
-  background-color: rgb(235, 204, 239);
+  background-color: #333;
+  border-color: #e77a00;
 }
 
 .widgets {
@@ -62,19 +76,22 @@
   margin-bottom: 20px;
 }
 
-.attendance, .tasks, .activity {
-  background-color: white;
+.attendance,
+.tasks,
+.activity {
+  background-color: #222;
   flex: 1;
   padding: 15px;
   border-radius: 10px;
   min-width: 250px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
 }
 
 .circle {
   font-size: 24px;
   font-weight: bold;
-  background: #2c7a7b;
-  color: white;
+  background: #e77a00;
+  color: #fff;
   width: 80px;
   height: 80px;
   display: flex;
@@ -84,14 +101,21 @@
   margin-top: 10px;
 }
 
-.tasks ul, .activity ul {
+.tasks ul,
+.activity ul {
   list-style: none;
   padding: 0;
 }
 
-.tasks li.purple { color: purple; }
-.tasks li.yellow { color: goldenrod; }
-.tasks li.green { color: green; }
+.tasks li.purple {
+  color: #e77a00;
+}
+.tasks li.yellow {
+  color: #ccc;
+}
+.tasks li.green {
+  color: green;
+}
 
 .dot {
   height: 10px;
@@ -101,12 +125,18 @@
   margin-right: 8px;
 }
 
-.dot.green { background-color: green; }
-.dot.yellow { background-color: goldenrod; }
-.dot.red { background-color: red; }
+.dot.green {
+  background-color: green;
+}
+.dot.yellow {
+  background-color: #e77a00;
+}
+.dot.red {
+  background-color: #e60000;
+}
 
 .assignments {
-  background-color: white;
+  background-color: #222;
   padding: 20px;
   border-radius: 10px;
 }
@@ -122,16 +152,17 @@
   flex: 1;
   padding: 20px;
   border-radius: 10px;
-  color: white;
+  color: #fff;
   min-width: 200px;
+  cursor: pointer;
 }
 
 .yellow-card {
-  background-color: orange;
+  background-color: #e77a00;
 }
 
 .red-card {
-  background-color: #e74c3c;
+  background-color: #e60000;
 }
 
 .student-info {
@@ -139,12 +170,13 @@
   align-items: center;
   gap: 15px;
   padding: 15px;
-  border: 1px solid #ccc;
+  border: 1px solid #333;
   border-radius: 10px;
-  background-color: #fff;
+  background-color: #1a1a1a;
   max-width: 600px;
   margin: 20px auto;
   flex-wrap: wrap;
+  color: #ccc;
 }
 
 .student-info img {
@@ -161,16 +193,17 @@
 .student-info h3 {
   margin: 0;
   font-size: 20px;
+  color: #fff;
 }
 
 .student-info p {
   margin: 5px 0 0;
   font-size: 14px;
-  color: #555;
+  color: #ccc;
 }
 
 .student-info .see-more {
-  background-color: goldenrod;
+  background-color: #e77a00;
   color: #fff;
   border: none;
   padding: 8px 16px;
@@ -179,15 +212,22 @@
   margin-left: auto;
 }
 
+.student-info .see-more:hover {
+  background-color: #e60000;
+}
+
 /* Right Panel */
 .right-panel {
   width: 300px;
   padding: 20px;
-  background-color: #f9f9f9;
+  background-color: #1a1a1a;
+  border-radius: 10px;
+  color: #ccc;
 }
 
-.calendar-box, .activity-box {
-  background-color: white;
+.calendar-box,
+.activity-box {
+  background-color: #222;
   padding: 15px;
   margin-bottom: 20px;
   border-radius: 10px;
@@ -196,13 +236,15 @@
 .react-calendar {
   width: 100% !important;
   border: none;
-  font-family: inherit;
-  line-height: 1.125em;
+  background: #1a1a1a;
+  color: #fff;
+  border-radius: 8px;
+  padding: 10px;
 }
 
 .note {
   font-size: 12px;
-  color: orange;
+  color: #e77a00;
   margin-top: 10px;
 }
 
@@ -214,9 +256,10 @@
 .activity-box li {
   margin-bottom: 10px;
   font-size: 14px;
+  color: #ccc;
 }
 
-
+/* Responsive */
 @media (max-width: 1024px) {
   .dashboard-container {
     flex-direction: column;
@@ -236,7 +279,6 @@
     flex-direction: column;
   }
 }
-
 
 @media (max-width: 768px) {
   .dashboard-container {
@@ -265,7 +307,6 @@
     padding: 10px;
   }
 }
-
 
 @media (max-width: 500px) {
   .student-info {

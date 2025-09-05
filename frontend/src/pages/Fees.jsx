@@ -35,6 +35,7 @@ const Fees = () => {
 
   return (
     <div className="fees-page">
+      <h1>View Fees Details</h1>
       {/* Billing Summary */}
       <section className="billing-summary">
         <h2>Billing Summary</h2>

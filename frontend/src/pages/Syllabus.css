@@ -1,0 +1,142 @@
+.syllabus-container {
+  background: #111;
+  min-height: 100vh;
+  padding: 100px;
+  font-family: "Segoe UI", sans-serif;
+  color: #ccc;
+}
+
+/* Header */
+.syllabus-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.syllabus-header h1 {
+  color: #e77a00;
+  font-size: 2.2rem;
+}
+.syllabus-header p {
+  font-size: 1.1rem;
+  color: #ccc;
+}
+.download-btn {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: #e77a00;
+  color: #000;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+.download-btn:hover {
+  background: #ff9800;
+  transform: scale(1.05);
+}
+
+/* Overview */
+.syllabus-overview {
+  background: #1a1a1a;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 25px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+}
+.syllabus-overview h2 {
+  color: #e77a00;
+  margin-bottom: 10px;
+}
+
+/* Modules */
+.syllabus-modules {
+  margin-bottom: 25px;
+}
+.modules-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+.module-card {
+  background: #222;
+  padding: 18px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+  transition: transform 0.2s ease;
+}
+.module-card:hover {
+  transform: translateY(-4px);
+}
+.module-card h3 {
+  color: #e77a00;
+  margin-bottom: 8px;
+}
+
+/* Evaluation */
+.evaluation {
+  background: #1a1a1a;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 25px;
+}
+.evaluation h2 {
+  color: #e77a00;
+  margin-bottom: 12px;
+}
+.evaluation ul {
+  list-style: none;
+  padding: 0;
+}
+.evaluation li {
+  margin-bottom: 8px;
+  font-size: 1rem;
+}
+.green {
+  color: #28a745;
+  font-weight: bold;
+}
+.red {
+  color: #e60000;
+  font-weight: bold;
+}
+.orange {
+  color: #e77a00;
+  font-weight: bold;
+}
+
+/* Notes */
+.important-notes {
+  background: #1a1a1a;
+  padding: 20px;
+  border-radius: 12px;
+}
+.important-notes h2 {
+  color: #e77a00;
+  margin-bottom: 12px;
+}
+.important-notes ul {
+  margin-left: 20px;
+  line-height: 1.6;
+}
+
+/* Scrollbar */
+.syllabus-container::-webkit-scrollbar {
+  width: 10px;
+}
+.syllabus-container::-webkit-scrollbar-thumb {
+  background: #e77a00;
+  border-radius: 8px;
+}
+.syllabus-container::-webkit-scrollbar-track {
+  background: #222;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .syllabus-container {
+    padding: 20px;
+  }
+  .download-btn {
+    width: 100%;
+  }
+}

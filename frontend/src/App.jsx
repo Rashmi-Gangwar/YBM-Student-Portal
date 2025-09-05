@@ -13,6 +13,7 @@ import Profile from "./pages/Profile";
 import Library from "./pages/Library";
 import Examination from "./pages/Examination";
 import Fees from "./pages/Fees";
+import Syllabus from "./pages/Syllabus";
 
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -44,7 +45,7 @@ const App = () => {
   return (
     <div>
       <Header />
-      <main style={{ marginTop: "100px", marginBottom: "0" }}>
+      <main style={{ marginTop: "80px", marginBottom: "0", backgroundColor: "black" }}>
         <Routes>
           <Route path="/" element={<Dashboard />} />
           <Route path="/attendance" element={<Attendance />} />
@@ -56,6 +57,7 @@ const App = () => {
           <Route path="/library" element={<Library />} />
           <Route path="/examination" element={<Examination />} />
           <Route path="/fee" element={<Fees />} />
+          <Route path="/syllabus" element={<Syllabus/> } />
         </Routes>
       </main>
       <ToastContainer theme="colored" />

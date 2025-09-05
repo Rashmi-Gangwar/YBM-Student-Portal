@@ -1,7 +1,8 @@
 .footer-section {
-  background-color: #fdfbf8;
+  background-color: #111;  /* Dark theme background */
   padding: 60px 20px 30px;
-  font-family: Arial, sans-serif;
+  font-family: 'Poppins', sans-serif;
+  color: #ccc;
 }
 
 .footer-container {
@@ -27,41 +28,47 @@
 .footer-logo img {
   width: 50px;
   height: 50px;
+  border-radius: 8px;
 }
 
 .footer-logo h2 {
   font-size: 1.3rem;
   margin: 0;
+  color: #fff;
 }
 
 .footer-logo span {
   display: block;
   font-size: 0.9rem;
-  color: #555;
+  color: #aaa;
 }
 
 .footer-col p {
   margin: 15px 0;
   font-size: 0.95rem;
-  color: #444;
+  color: #bbb;
   line-height: 1.6;
 }
 
 .social-icons {
   display: flex;
   gap: 15px;
-  font-size: 1.1rem;
-  color: #333;
+  font-size: 1.2rem;
+  color: #ccc;
+  transition: color 0.3s ease;
 }
 
 .social-icons:hover {
-  color: #f2b233;
+  color: #e77a00; /* Accent color */
   cursor: pointer;
 }
 
 .footer-col h3 {
   font-size: 1.2rem;
   margin-bottom: 15px;
+  color: #fff;
+  border-left: 3px solid #e77a00;
+  padding-left: 8px;
 }
 
 .sitemap-links {
@@ -78,24 +85,26 @@
 .sitemap-links li {
   margin-bottom: 10px;
   font-size: 0.95rem;
+  color: #aaa;
   cursor: pointer;
+  transition: color 0.3s ease;
 }
 
 .sitemap-links li:hover {
-  color: #f2b233;
+  color: #e77a00; /* Orange hover */
 }
 
 .footer-bottom {
   margin-top: 30px;
   text-align: center;
   font-size: 0.9rem;
-  color: #666;
+  color: #888;
   padding-top: 20px;
-  border-top: 1px solid #ddd;
+  border-top: 1px solid #333;
 }
 
 .footer-bottom .highlight {
-  color: #2ab087;
+  color: #e77a00;
   font-weight: 500;
 }
 

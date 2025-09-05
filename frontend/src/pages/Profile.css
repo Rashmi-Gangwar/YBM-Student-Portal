@@ -2,28 +2,32 @@
   display: flex;
   flex-wrap: wrap;
   min-height: 100vh;
-  background: #f7f9fc;
-  padding: 60px;
+  background: #111;
+  padding: 100px;
   gap: 20px;
   font-family: 'Segoe UI', sans-serif;
+  color: #ccc;
+  box-sizing: border-box;
 }
 
+/* Left & Right Panels */
 .profile-left {
   flex: 0 0 40%;
-  background: white;
+  background: #1a1a1a;
   border-radius: 16px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
   padding: 20px;
 }
 
 .profile-right {
   flex: 0 0 58%;
-  background: white;
+  background: #1a1a1a;
   border-radius: 16px;
   padding: 20px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
 }
 
+/* Header & Profile Image */
 .profile-header {
   text-align: center;
   margin-bottom: 20px;
@@ -34,31 +38,33 @@
   height: 120px;
   border-radius: 50%;
   object-fit: cover;
-  border: 1px solid #007bff;
+  border: 2px solid #e77a00;
   margin-bottom: 10px;
 }
 
+/* Info */
 .profile-info p {
   font-size: 0.95rem;
   display: flex;
   align-items: center;
   gap: 10px;
-  margin: 2px 0;
-  padding: 5px;
-  background: #f4f6f9;
+  margin: 4px 0;
+  padding: 8px 10px;
+  background: #222;
   border-radius: 8px;
   transition: background 0.3s;
 }
 
 .profile-info p:hover {
-  background: #e2e6eb;
+  background: #333;
 }
 
 .profile-info svg {
-  color: #007bff;
+  color: #e77a00;
   min-width: 20px;
 }
 
+/* Action buttons */
 .top-actions {
   display: flex;
   gap: 12px;
@@ -76,30 +82,42 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, background 0.3s ease;
 }
 
 .btn:hover {
   transform: scale(1.05);
 }
 
+/* Buttons with theme */
 .btn:nth-child(1) {
-  background-color: #673ab7;
+  background-color: #333;
+}
+.btn:nth-child(1):hover {
+  background-color: #e77a00;
+  color: #000;
 }
 
 .btn:nth-child(2) {
   background-color: #28a745;
 }
+.btn:nth-child(2):hover {
+  background-color: #218838;
+}
 
 .btn:nth-child(3) {
+  background-color: #e77a00;
+}
+.btn:nth-child(3):hover {
   background-color: #ff9800;
 }
 
+/* Section Cards */
 .section-card {
-  background-color: #fefefe;
+  background-color: #222;
   padding: 20px;
   border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
   margin-bottom: 20px;
   transition: transform 0.2s ease;
 }
@@ -112,28 +130,30 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  color: #333;
-  margin-bottom: 10px;
+  color: #e77a00;
+  margin-bottom: 12px;
   font-size: 1.1rem;
 }
 
 .section-card svg {
-  color: #ff9800;
+  color: #e77a00;
   font-size: 1.2rem;
 }
 
 .section-card input[type="file"] {
   margin-top: 10px;
   font-size: 0.9rem;
+  color: #ccc;
 }
 
 .section-card ul {
   margin-left: 20px;
   font-size: 0.9rem;
   list-style: disc;
-  color: #444;
+  color: #ccc;
 }
 
+/* Stars */
 .stars {
   display: flex;
   gap: 6px;
@@ -142,16 +162,26 @@
   margin: 10px 0;
 }
 
+/* Textarea */
 textarea {
   width: 100%;
-  padding: 10px;
+  padding: 12px;
   font-size: 0.95rem;
   border-radius: 8px;
-  border: 1px solid #ccc;
+  border: 1px solid #333;
   resize: vertical;
   min-height: 80px;
+  background: #111;
+  color: #ccc;
+  box-sizing: border-box;
 }
 
+textarea:focus {
+  border-color: #e77a00;
+  outline: none;
+}
+
+/* Bottom actions */
 .bottom-actions {
   margin-top: 30px;
   display: flex;
@@ -160,43 +190,108 @@ textarea {
 }
 
 .change-pass {
-  background-color: #673ab7;
+  background-color: #333;
+}
+.change-pass:hover {
+  background-color: #e77a00;
+  color: #000;
 }
 
 .logout {
-  background-color: #e53935;
+  background-color: #e60000;
 }
-
-.change-pass:hover {
-  background-color: #512da8;
-}
-
 .logout:hover {
   background-color: #b71c1c;
 }
 
-@media (max-width: 1024px) {
+/* 📱 Mobile Specific Spacing */
+@media (max-width: 768px) {
   .profile-container {
-    flex-direction: column;
+    padding: 25px;
+    gap: 25px; /* more gap between left & right sections when stacked */
   }
 
   .profile-left,
   .profile-right {
-    flex: 0 0 100%;
+    padding: 24px; /* extra padding inside cards */
   }
-}
 
-@media (max-width: 576px) {
+  .profile-info p {
+    margin: 12px 0; /* more vertical space between info items */
+    padding: 12px 16px;
+  }
+
+  .top-actions {
+    flex-direction: column;
+    gap: 18px; /* bigger gaps between buttons */
+    margin-bottom: 28px;
+  }
+
   .btn {
-    width: 60%;
+    width: 100%;
     justify-content: center;
+    padding: 14px;
+    font-size: 1rem;
+  }
+
+  .section-card {
+    padding: 22px;
+    margin-bottom: 28px; /* more gap between sections */
+  }
+
+  .section-card h4 {
+    margin-bottom: 18px;
+  }
+
+  .section-card ul {
+    margin-left: 22px;
+    line-height: 1.7; /* airy list items */
+  }
+
+  textarea {
+    min-height: 130px;
+    padding: 14px;
+    margin-top: 14px;
   }
 
   .bottom-actions {
     flex-direction: column;
+    gap: 18px; /* extra space between bottom buttons */
+    margin-top: 35px;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-container {
+    padding: 30px;
+    gap: 22px;
+  }
+
+  .profile-info {
+    padding: 10px;
+  }
+
+  .profile-left,
+  .profile-right {
+    padding: 0.01rem;
+  }
+
+  .top-actions, .profile-sections, .bottom-actions {
+    padding: 10px;
+  }
+
+  .btn {
+    padding: 12px;
+    font-size: 0.95rem;
+  }
+
+  .section-card {
+    padding: 0.01px;
+    margin-bottom: 25px;
   }
 
   textarea {
-    min-height: 100px;
+    min-height: 140px;
+    font-size: 0.95rem;
   }
 }

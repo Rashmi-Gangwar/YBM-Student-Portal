@@ -2,15 +2,17 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 40px 20px;
+  padding: 80px 20px 40px 20px;
   min-height: 100vh;
-  background-color: #f4f7fc;
+  background-color: #111;
   flex-wrap: wrap;
+  color: #ccc;
 }
 
+/* Left card */
 .left-card {
-  background-color: #fff;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  background-color: #1a1a1a;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
   border-radius: 20px;
   padding: 20px 30px;
   margin: 10px;
@@ -20,7 +22,7 @@
 
 .left-card h2 {
   margin-bottom: 20px;
-  color: #333;
+  color: #e77a00; /* orange accent */
 }
 
 .left-card button {
@@ -30,17 +32,19 @@
   padding: 12px;
   border: none;
   border-radius: 8px;
-  background-color: #007bff;
-  color: white;
+  background-color: #333;
+  color: #fff;
   font-weight: 600;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .left-card button:hover {
-  background-color: #0056b3;
+  background-color: #e77a00;
+  color: #000;
 }
 
+/* Right form */
 .right-form {
   flex: 1;
   min-width: 250px;
@@ -49,16 +53,16 @@
 }
 
 .form-card {
-  background: #fff;
+  background: #1a1a1a;
   padding: 40px 30px;
   border-radius: 20px;
-  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.7);
 }
 
 .form-card h2 {
   margin-bottom: 20px;
   text-align: center;
-  color: #333;
+  color: #e77a00; /* orange heading */
 }
 
 .form-card form {
@@ -69,14 +73,22 @@
 .form-card input {
   margin-bottom: 15px;
   padding: 12px 15px;
-  border: 1px solid #ccc;
+  border: 1px solid #333;
   border-radius: 8px;
   font-size: 16px;
+  background-color: #111;
+  color: #ccc;
 }
 
+.form-card input:focus {
+  border-color: #e77a00;
+  outline: none;
+}
+
+/* Submit button */
 .form-card button {
   padding: 12px;
-  background-color: #28a745;
+  background-color: #28a745; /* green for success */
   color: white;
   font-weight: 600;
   border: none;
@@ -87,4 +99,12 @@
 
 .form-card button:hover {
   background-color: #218838;
+}
+
+/* Error message */
+.error-message {
+  color: #e60000;
+  margin-bottom: 10px;
+  font-size: 14px;
+  text-align: center;
 }

@@ -1,32 +1,53 @@
-.assignment-container {
-  padding: 2rem;
-  background: #f7f9fc;
-  min-height: 100vh;
-  font-family: 'Segoe UI', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #111;
+  color: #ccc;
+}
+
+/* Container */
+.assignment-container {
+  padding: 6rem;
+  background: #111;
+  min-height: 100vh;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+/* Page Heading */
 .assignment-heading {
   text-align: center;
   font-size: 2.2rem;
   margin-bottom: 2rem;
-  color: #333;
+  color: #e77a00;
+  font-weight: 600;
 }
 
+/* Sections */
 .assignment-section {
   margin-bottom: 3rem;
-  background: #ffffff;
+  background: #1a1a1a;
   border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
   padding: 1.5rem;
-  animation: fadeIn 0.6s ease-in-out;
+  animation: fadeInUp 0.6s ease-in-out;
 }
 
 .assignment-section h2 {
   margin-bottom: 1rem;
-  color: #555;
-  font-weight: 600;
+  color: #fff;
+  font-weight: 500;
+  border-left: 4px solid #e77a00;
+  padding-left: 10px;
 }
 
+/* Table Styling */
 .table-wrapper {
   overflow-x: auto;
 }
@@ -35,39 +56,100 @@
   width: 100%;
   border-collapse: collapse;
   font-size: 0.95rem;
+  background: #222;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 .assignment-table th,
 .assignment-table td {
   padding: 12px 15px;
-  border: 1px solid #ddd;
   text-align: center;
+  border: 1px solid #333;
 }
 
 .assignment-table th {
-  background-color: #f0f0f0;
+  background-color: #333;
   font-weight: 600;
-  color: #222;
+  color: #e77a00;
 }
 
 .assignment-table td {
-  background-color: #fff;
+  background-color: #1a1a1a;
+  color: #ccc;
 }
 
+.assignment-table tbody tr:hover {
+  background-color: #2a2a2a;
+  transition: background 0.3s;
+}
+
+/* Download Button */
 .download-btn {
-  background-color: #ff6600;
+  background-color: #e77a00;
   color: #fff;
   padding: 6px 12px;
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  transition: background 0.3s;
+  transition: background 0.3s, transform 0.2s;
+  font-weight: 500;
 }
 
 .download-btn:hover {
-  background-color: #e05500;
+  background-color: #cc6600;
+  transform: translateY(-2px);
 }
 
+/* Status Colors */
+.status-completed {
+  color: #00c853;
+  font-weight: 600;
+}
+
+.status-pending {
+  color: #e60000;
+  font-weight: 600;
+}
+
+/* Custom Scrollbar */
+.table-wrapper::-webkit-scrollbar {
+  height: 10px;
+}
+
+.table-wrapper::-webkit-scrollbar-track {
+  background: #111;
+  border-radius: 10px;
+}
+
+.table-wrapper::-webkit-scrollbar-thumb {
+  background: #e77a00;
+  border-radius: 10px;
+  transition: background 0.3s;
+}
+
+.table-wrapper::-webkit-scrollbar-thumb:hover {
+  background: #cc6600;
+}
+
+/* Firefox */
+.table-wrapper {
+  scrollbar-color: #444 #111;
+  scrollbar-width: thin;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(10px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+@keyframes fadeInUp {
+  from {opacity: 0; transform: translateY(20px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+/* Responsive */
 @media (max-width: 768px) {
   .assignment-table {
     font-size: 0.85rem;
@@ -76,9 +158,8 @@
   .assignment-container {
     padding: 1rem;
   }
-}
 
-@keyframes fadeIn {
-  from {opacity: 0; transform: translateY(10px);}
-  to {opacity: 1; transform: translateY(0);}
+  .assignment-heading {
+    font-size: 1.6rem;
+  }
 }
